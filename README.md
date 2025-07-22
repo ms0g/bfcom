@@ -1,7 +1,6 @@
 # bfcom
 
-A tiny Brainfuck interpreter for MS-DOS `.COM` executables.  
-Built for real-mode x86 systems — because why not run esoteric code on ancient machines?
+A tiny Brainfuck interpreter packed into a single MS-DOS `.COM` file - because why not run esoteric code on ancient machines?
 
 ## Usage
 ```bash
