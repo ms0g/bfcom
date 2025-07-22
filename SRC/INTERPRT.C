@@ -25,6 +25,7 @@ void interpret(char* code) {
             }
             case ',': {
                 unsigned char chr;
+                
                 asm {
                     mov ah, 1
                     int 0x21
