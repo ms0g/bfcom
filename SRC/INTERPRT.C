@@ -8,6 +8,8 @@ void interpret(char* code) {
     unsigned char* ptr = tape;
     
     while (*pc) {
+        int jump = 1;
+
         switch (*pc) {
             case '>': ptr++; break;
             case '<': ptr--; break;
@@ -44,6 +46,7 @@ void interpret(char* code) {
                         else if (*pc == ']') 
                             depth--;
                     }
+                    jump = 0; // already incremented pc
                 }
                 break;
             }
@@ -57,10 +60,13 @@ void interpret(char* code) {
                         else if (*pc == '[') 
                             depth--;
                     }
+                    jump = 0; // already decremented pc
                 }
                 break;
             }
         }
-        pc++;
+        if (jump) {
+            pc++;
+        }
     }
 }
