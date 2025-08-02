@@ -1,7 +1,10 @@
 .model tiny
 .data
+BUFFER_SIZE equ 512
+
 filename db 13 dup(0)
-buffer   db 512 dup(0)
+buffer   db BUFFER_SIZE dup(0)
+
 .code
 org 100h         
 
@@ -35,7 +38,7 @@ cpy_done:
     
     ; Read up to 511 bytes from file into buffer
     mov ah, 3Fh
-    mov cx, 511
+    mov cx, BUFFER_SIZE - 1 ; Read up to 511 bytes
     lea dx, buffer
     int 21h
     jc read_fail
