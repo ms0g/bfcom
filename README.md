@@ -13,12 +13,6 @@ Because MS-DOS deserves some love from the 21st century.
 
 And honestly — why not?
 
-## Features
-- Fits within a single 64KB segment (`.COM` file format).
-- Reads Brainfuck source code from an external `.BF` file.
-- Supports all 8 Brainfuck commands: `> < + - . , [ ]`.
-- Uses DOS interrupts only — no standard C library.
-
 ## Prerequisites
 - **Turbo C++** (`TCC.EXE`) version 3.0 or later  
 - **Turbo Assembler** (`TASM.EXE`) version 4.1 or later  
