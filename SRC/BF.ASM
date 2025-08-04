@@ -13,7 +13,7 @@ org 100h
 extrn _interpret:near
 
 start:
-    mov di, offset tape
+    lea di, tape
     xor al, al
     mov cx, TAPE_SIZE
     rep stosb
