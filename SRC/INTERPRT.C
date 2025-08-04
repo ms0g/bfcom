@@ -1,9 +1,4 @@
-
-#define TAPE_SIZE 30000
-
-unsigned char tape[TAPE_SIZE] = {0};
-
-void interpret(char* code) {
+void interpret(char* code, unsigned char* tape) {
     const char* pc = code;
     unsigned char* ptr = tape;
     
