@@ -15,7 +15,7 @@ extrn _interpret:near
 start:
     mov di, offset tape
     xor al, al
-    mov cx, 30000
+    mov cx, TAPE_SIZE
     rep stosb
     ; Get the command line from the PSP
     mov si, 80h                 ; SI = offset 0x80 in PSP = length of command line tail
