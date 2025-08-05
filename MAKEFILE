@@ -1,6 +1,6 @@
 all:
 	MAKE.EXE clean
-	TASM.EXE /ml BF.ASM
+	TASM.EXE /m BF.ASM
 	TCC.EXE -O -mt -c INTERPRT.C
 	TLINK /t BF.OBJ INTERPRT.OBJ
 clean:
